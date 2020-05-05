@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Klingon:</strong>
+  <%= @proverb.klingon %>
+</p>
+
+<p>
+  <strong>Translation:</strong>
+  <%= @proverb.translation %>
+</p>
+
+<p>
+  <strong>Active:</strong>
+  <%= @proverb.active %>
+</p>
+
+<%= link_to 'Edit', edit_proverb_path(@proverb) %> |
+<%= link_to 'Back', proverbs_path %>

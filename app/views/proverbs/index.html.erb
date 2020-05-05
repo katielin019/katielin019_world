@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Proverbs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Klingon</th>
+      <th>Translation</th>
+      <th>Active</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @proverbs.each do |proverb| %>
+      <tr>
+        <td><%= proverb.klingon %></td>
+        <td><%= proverb.translation %></td>
+        <td><%= proverb.active %></td>
+        <td><%= link_to 'Show', proverb %></td>
+        <td><%= link_to 'Edit', edit_proverb_path(proverb) %></td>
+        <td><%= link_to 'Destroy', proverb, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Proverb', new_proverb_path %>

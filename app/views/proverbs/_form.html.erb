@@ -1,0 +1,13 @@
+<%= simple_form_for(@proverb) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :klingon %>
+    <%= f.input :translation %>
+    <%= f.input :active %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
